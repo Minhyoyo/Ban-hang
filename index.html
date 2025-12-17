@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Simple Product Showcase</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <h1>Sản phẩm nổi bật</h1>
+</header>
+<main>
+  <section class="product-grid" aria-label="Danh sách sản phẩm">
+    <article class="product-card" tabindex="0">
+      <img src="https://images.pexels.com/photos/715688/pexels-photo-715688.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Điện thoại thông minh hiện đại" />
+      <div class="product-info">
+        <div class="product-name">Điện thoại thông minh</div>
+        <div class="product-price">5,000,000₫</div>
+        <button class="buy-btn" aria-label="Mua Điện thoại thông minh">Mua</button>
+      </div>
+    </article>
+    <article class="product-card" tabindex="0">
+      <img src="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Tai nghe không dây màu đen" />
+      <div class="product-info">
+        <div class="product-name">Tai nghe không dây</div>
+        <div class="product-price">1,200,000₫</div>
+        <button class="buy-btn" aria-label="Mua Tai nghe không dây">Mua</button>
+      </div>
+    </article>
+    <article class="product-card" tabindex="0">
+      <img src="https://images.pexels.com/photos/845451/pexels-photo-845451.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Đồng hồ thông minh màn hình tròn" />
+      <div class="product-info">
+        <div class="product-name">Đồng hồ thông minh</div>
+        <div class="product-price">3,500,000₫</div>
+        <button class="buy-btn" aria-label="Mua Đồng hồ thông minh">Mua</button>
+      </div>
+    </article>
+    <article class="product-card" tabindex="0">
+      <img src="https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Máy tính xách tay mở rộng" />
+      <div class="product-info">
+        <div class="product-name">Máy tính xách tay</div>
+        <div class="product-price">15,000,000₫</div>
+        <button class="buy-btn" aria-label="Mua Máy tính xách tay">Mua</button>
+      </div>
+    </article>
+    <article class="product-card" tabindex="0">
+      <img src="https://images.pexels.com/photos/3755762/pexels-photo-3755762.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Máy ảnh kỹ thuật số với lens" />
+      <div class="product-info">
+        <div class="product-name">Máy ảnh kỹ thuật số</div>
+        <div class="product-price">8,000,000₫</div>
+        <button class="buy-btn" aria-label="Mua Máy ảnh kỹ thuật số">Mua</button>
+      </div>
+    </article>
+    <article class="product-card" tabindex="0">
+      <img src="https://images.pexels.com/photos/1334597/pexels-photo-1334597.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Ba lô đi học màu xanh" />
+      <div class="product-info">
+        <div class="product-name">Ba lô đi học</div>
+        <div class="product-price">500,000₫</div>
+        <button class="buy-btn" aria-label="Mua Ba lô đi học">Mua</button>
+      </div>
+    </article>
+  </section>
+</main>
+<script>
+  // Add simple "Buy" interaction alert for demonstration
+  document.querySelectorAll('.buy-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const productName = button.closest('.product-card').querySelector('.product-name').textContent;
+      alert('Bạn đã chọn mua: ' + productName);
+    });
+  });
+</script>
+</body>
+</html>
